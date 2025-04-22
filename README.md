@@ -25,11 +25,3 @@ O **NewsPodcast** é um aplicativo WPF que resume notícias em uma linguagem nat
 ## 🧭 Arquitetura
 
 Mesmo sendo um projeto de pequeno porte, o **NewsPodcast** foi desenvolvido com uma arquitetura em camadas, buscando seguir os princípios da **Clean Architecture**. A proposta é manter o código desacoplado e escalável, permitindo futuras melhorias, substituição de tecnologias ou integração com novas fontes de dados e serviços.
-
----
-
-## 🚀 Como Rodar o Projeto
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/NewsPodcast.git
