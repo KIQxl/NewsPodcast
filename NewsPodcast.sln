@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewsPodcast.Core", "NewsPodcast.Core", "{96710396-3FF9-4F00-9AD3-8C0B8717D622}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewsPodcast.Infraestructure", "NewsPodcast.Infraestructure", "{1DD26AB1-1820-406F-89BF-98654E7614F9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPodcast.Core", "src\services\NewsPodcast.Core\NewsPodcast.Core.csproj", "{7DE608DD-0040-410C-9017-0483E9405253}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPodcast.Infraestructure", "src\services\NewsPodcast.Infraestructure\NewsPodcast.Infraestructure.csproj", "{1D12A1D8-246F-4C2B-8B38-22B8A2653C05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewsPodcast.Test", "NewsPodcast.Test", "{4AABC0C9-58C9-49A6-84FD-774B79B1EC10}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPodcast.Test", "src\test\NewsPodcast.Test\NewsPodcast.Test.csproj", "{889EE0EA-D9F7-445A-8D96-961BF689E767}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewsPodcast.Presentation", "NewsPodcast.Presentation", "{8F04CD64-B0EC-495F-816E-74D418744E0E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsPodcast.App", "src\app\NewsPodcast.App\NewsPodcast.App.csproj", "{6A84AF81-D38F-4711-A0CF-8C18E7787607}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{A278233B-CEC3-4FE4-84BF-6D057BC664D8}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DE608DD-0040-410C-9017-0483E9405253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DE608DD-0040-410C-9017-0483E9405253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DE608DD-0040-410C-9017-0483E9405253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DE608DD-0040-410C-9017-0483E9405253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D12A1D8-246F-4C2B-8B38-22B8A2653C05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D12A1D8-246F-4C2B-8B38-22B8A2653C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D12A1D8-246F-4C2B-8B38-22B8A2653C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D12A1D8-246F-4C2B-8B38-22B8A2653C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{889EE0EA-D9F7-445A-8D96-961BF689E767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889EE0EA-D9F7-445A-8D96-961BF689E767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889EE0EA-D9F7-445A-8D96-961BF689E767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889EE0EA-D9F7-445A-8D96-961BF689E767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A84AF81-D38F-4711-A0CF-8C18E7787607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A84AF81-D38F-4711-A0CF-8C18E7787607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A84AF81-D38F-4711-A0CF-8C18E7787607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A84AF81-D38F-4711-A0CF-8C18E7787607}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7DE608DD-0040-410C-9017-0483E9405253} = {96710396-3FF9-4F00-9AD3-8C0B8717D622}
+		{1D12A1D8-246F-4C2B-8B38-22B8A2653C05} = {1DD26AB1-1820-406F-89BF-98654E7614F9}
+		{889EE0EA-D9F7-445A-8D96-961BF689E767} = {4AABC0C9-58C9-49A6-84FD-774B79B1EC10}
+		{6A84AF81-D38F-4711-A0CF-8C18E7787607} = {8F04CD64-B0EC-495F-816E-74D418744E0E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C638BE4B-9A64-47BA-9A88-E7D3A5A07396}
+	EndGlobalSection
+EndGlobal

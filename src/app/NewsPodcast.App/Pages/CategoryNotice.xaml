@@ -1,0 +1,123 @@
+﻿<Page x:Class="NewsPodcast.App.Pages.CategoryNotice"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NewsPodcast.App.Pages"
+      mc:Ignorable="d" 
+      Title="CategoryNotice">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <MediaElement x:Name="AudioPlayer"
+                    LoadedBehavior="Manual"
+                    UnloadedBehavior="Stop"
+                    Visibility="Collapsed"
+                    MediaOpened="AudioPlayer_MediaOpened"
+                    MediaEnded="AudioPlayer_MediaEnded" />
+
+        <Border Background="#FFF" Grid.Row="0" BorderBrush="#DDD" BorderThickness="0 0 0 1" Height="100">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="News Podcast"
+                           FontSize="28"
+                           FontWeight="Bold"
+                           VerticalAlignment="Center"
+                           Margin="11 0"
+                           Grid.Column="0"
+                           MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
+
+                <StackPanel Orientation="Horizontal"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            Grid.Column="1"
+                            Margin="10"
+                            x:Name="PlayerPanel">
+
+                    <Button Width="40" Height="40" Background="Transparent" BorderThickness="0" Click="Rewind_Click" ToolTip="Voltar 10s">
+                        <Image Source="../Assets/rewind.png" Width="24" Height="24"/>
+                    </Button>
+
+                    <Button x:Name="PlayPauseButton" Width="40" Height="40" Background="Transparent" BorderThickness="0" Click="PlayPauseButton_Click" ToolTip="Play/Pause">
+                        <Image x:Name="PlayPauseIcon" Source="../Assets/play.png" Width="24" Height="24"/>
+                    </Button>
+
+                    <Button Width="40" Height="40" Background="Transparent" BorderThickness="0" Click="Forward_Click" ToolTip="Avançar 10s">
+                        <Image Source="../Assets/forward.png" Width="24" Height="24"/>
+                    </Button>
+
+                    <Slider x:Name="AudioSlider"
+                            Width="350"
+                            Margin="10,0"
+                            Minimum="0"
+                            Maximum="100"
+                            ValueChanged="AudioSlider_ValueChanged"
+                            PreviewMouseDown="AudioSlider_PreviewMouseDown"
+                            PreviewMouseUp="AudioSlider_PreviewMouseUp"
+                            VerticalAlignment="Center">
+                        <Slider.Resources>
+                            <Style TargetType="Thumb">
+                                <Setter Property="Width" Value="14"/>
+                                <Setter Property="Height" Value="14"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Thumb">
+                                            <Ellipse Fill="#FF4081" Stroke="#444" StrokeThickness="1"/>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Slider.Resources>
+                    </Slider>
+                </StackPanel>
+
+
+                <TextBox Width="200"
+                         Height="30"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Right"
+                         Margin="0 0 20 0"
+                         Grid.Column="2"
+                         VerticalContentAlignment="Center"
+                         Name="txtAboutBy"
+                         KeyDown="txtAboutBy_KeyDown"/>
+            </Grid>
+        </Border>
+
+        <ScrollViewer Grid.Row="1"
+              Margin="20,20,20,10"
+              VerticalScrollBarVisibility="Auto">
+
+            <StackPanel>
+                <WrapPanel x:Name="NewsCardsWrapPanel"
+                   Orientation="Horizontal"
+                   HorizontalAlignment="Center"
+                   Margin="10"
+                   ItemHeight="Auto"
+                   ItemWidth="Auto" />
+
+                <StackPanel x:Name="NoNewsPanel"
+                    Visibility="Collapsed"
+                    Margin="10"
+                    HorizontalAlignment="Center">
+                    <TextBlock Text="Nenhuma notícia encontrada para o tema pesquisado."
+                       Foreground="Black"
+                       FontStyle="Italic"
+                       FontSize="16"
+                       TextAlignment="Center"
+                       Margin="10"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
